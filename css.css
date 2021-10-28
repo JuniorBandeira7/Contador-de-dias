@@ -77,3 +77,54 @@ a{
     text-decoration: none;
     color: white;
 }
+@media(max-width: 1344px){
+    .output{
+        width: 150px;
+    }
+    .input-data{
+        width: 150px;
+    }
+}
+@media(max-width: 1140px){
+    h1{
+        margin-top: 0%;
+    }
+}
+@media(max-width: 700px){
+    #container-principal{
+        margin-top: 25%;   
+    }
+    .output{
+        width: 100px;
+        font-size: 9px;
+        height: 20.1px;
+    }
+    .input-data{
+        width: 100px;
+        font-size: 9px;
+        }
+    @media(max-width: 490px){
+        .output{
+            width: 200px;
+            font-size: 5px;
+            height: 20.1px;
+        }
+        .input-data{
+            width: 200px;
+            font-size: 9px;
+            }
+        #date-container{
+            display: flex;
+            margin-top: 30%;
+            flex-direction: column;
+        }
+        #date-container1{
+            display: flex;
+            margin-bottom: 25%;
+            flex-direction: column;
+        }
+        h1{
+            font-size: 40px;
+        }
+    }
+}
