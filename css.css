@@ -1,0 +1,79 @@
+html{height: 100%;}
+body{
+    
+    
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#pagina-toda{
+    background: #1a1919;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position:absolute; 
+}
+#container-principal{
+    background-color: #201f1f;
+    margin-top: 7.5%;
+    height: 70%;
+    width: 70%;
+    box-shadow: -1px 1px 15px, 10px 10px 10px; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+ 
+}
+h1{
+    position: absolute;
+    font-size: 50px;
+    color: #efef51;
+}
+.input-data{
+    color: #efef51;
+    background: none;
+    border: none;
+    border-bottom: 1px solid;
+    margin-left: 7px;
+    margin-right: 7px;
+    height: 30px;
+    width: 300px;
+    font-size: 15px;
+}
+.output{
+    color: #efef51;
+    background: none;
+    border: none;
+    border-bottom: 1px solid;
+    margin-left: 7px;
+    margin-right: 7px;
+    height: 15px;
+    width: 300px;
+    font-size: 15px;
+}
+#dates-container{
+    position: absolute;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+}
+#date-container1{
+    margin-bottom: 100px;
+    display: flex;
+}
+#date-container{display: flex;}
+#footer{
+    background: #000000;
+    height: 15%;
+    width: 100%;
+    bottom: -85%;
+    position: relative;  
+}
+p{
+    color: #ffffff; 
+}
+a{
+    text-decoration: none;
+    color: white;
+}
