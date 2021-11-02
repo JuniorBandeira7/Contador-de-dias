@@ -52,6 +52,16 @@ h1{
     width: 300px;
     font-size: 15px;
 }
+#data-recebida2{
+    height: 17px;
+}
+.botao{
+    background: #1a1919;
+    border: none;
+    color: yellow;
+    border-radius: 9px;
+    
+}
 #dates-container{
     position: absolute;
     margin-top: 12%;
