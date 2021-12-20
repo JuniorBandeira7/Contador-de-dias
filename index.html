@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -14,15 +13,14 @@
         <section id="container-principal">
             <div id="dates-container">
                 <div id="date-container1">
-                    <input type="date" class="input-data" id="data-recebida">
-                    <input type="date" class="input-data" id="data-atual">
-                    <p class="output" id="output1"> </p>
-                    <input type="button" value="Calcular" class="botao">    
+                    <input type="text" class="input-data" id="data-recebida" placeholder="Contar para frente">
+                    <p class="output" id="output1">dd/mm/aaaa</p>
+                    <input type="button" value="Calcular" class="botao" onclick="InputNumberOutputDate()">    
                 </div>
                 <div id="date-container">
-                    <input type="text" class="input-data" id="output2" placeholder="Coloque quantos dias quer contar"  value> 
-                    <p type="text"  class="input-data" id="data-recebida2"  readonly="true" >dd/mm/aaa</p>
-                    <input type="button" value="Calcular" onclick="InputNumberOutputDate()" class="botao">
+                    <input type="text" class="input-data" id="output2" placeholder="Contar para trás"  value> 
+                    <p type="text"  class="input-data" id="data-recebida2"  readonly="true" >dd/mm/aaaa</p>
+                    <input type="button" value="Calcular" onclick="InputNumberOutputDate1()" class="botao">
                 </div>
             </div>
         <footer id="footer">
@@ -30,48 +28,7 @@
             <p>GitHub: <a href="https://github.com/JuniorBandeira7">JuniorBandeira7</a></p>
         </footer>
         </section>
-        <script>
-            function InputNumberOutputDate(){
-                var data = new Date();
-                var AnoAtual=data.getFullYear();
-                var MesAtual=data.getMonth();
-                var DiaAtual=data.getDay();
-                ano=AnoAtual;
-                mes=MesAtual+1;
-                dia=DiaAtual;
-                AMes=new Array(0,31,28,31,30,31,30,31,31,30,31,30,31);
-                AMesBissexto=new Array(0,31,29,31,30,31,30,31,31,30,31,30,31);
-                QuantidadeDias= document.getElementById('output2').value;
-                while(QuantidadeDias>0){
-                    if(dia==0){
-                        if(ano%4==0 && ano%100!=0 || ano%4==0 && ano%100==0 && ano%400==0){//se o ano for bissexto
-                            mes=mes-1;
-                                if(mes==0 && dia==0){
-                                ano=ano-1;
-                                mes=12;
-                                }
-                            dia=AMesBissexto[mes];//recebe a quantidade de dias equivalente ao mes(se o mes for bissexto)
-                            }else{
-                                mes=mes-1;
-                                if(mes==0 && dia==0){
-                                    ano=ano-1;
-                                    mes=12;
-                                }
-                                dia=AMes[mes];
-                        }
-                    }
-                    dia=dia-1;
-                    QuantidadeDias=QuantidadeDias-1; 
-                }
-                if(dia==0){
-                    dia=31;
-                    mes=12;
-                    ano=ano-1;
-                }
-                var EscreveDia = document.getElementById('data-recebida2')    
-                EscreveDia.innerText = `${dia}/${mes}/${ano}`
-                }
-            </script>   
-    </div>
+    <script src="contar-dias-para-frente.js"></script>
+    <script src="contar-dias-para-tras.js"></script>
 </body>
 </html>

@@ -119,7 +119,6 @@ a{
     @media(max-width: 490px){
         .output{
             width: 200px;
-            font-size: 5px;
             height: 20.1px;
         }
         .input-data{

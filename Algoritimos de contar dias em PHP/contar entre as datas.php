@@ -7,7 +7,7 @@
     $dia=$DiaAtual;
     $AMes=array(1=>31,2=>28,3=>31,4=>30,5=>31,6=>30,7=>31,8=>31,9=>30,10=>31,11=>30,12=>31);
     $AMesBissexto=array(1=>31,2=>29,3=>31,4=>30,5=>31,6=>30,7=>31,8=>31,9=>30,10=>31,11=>30,12=>31);
-    $QuantidadeDias=306;
+    $QuantidadeDias=354;
     
     
 
@@ -41,10 +41,19 @@
         $QuantidadeDias=$QuantidadeDias-1;
        
     }
-    if($dia==0){
+    if($dia==0 && $mes==1){
         $dia=31;
         $mes=12;
         $ano=$ano-1;
+    }
+    if($dia==0){
+        if($ano%4==0 && $ano%100!=0 || $ano%4==0 && $ano%100==0 && $ano%400==0){
+            $mes=$mes-1; 
+            $dia=$AMesBissexto[$mes];
+        }else{
+            $mes=$mes-1; 
+            $dia=$AMes[$mes]; 
+        }
     }
    
     
